@@ -1,0 +1,104 @@
+#cell {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(216,228,230);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
+    position: relative;
+    border-radius: 4px;
+    color: transparent;
+  }
+
+  #cell:not(.empty) {
+    animation: all 0.5s ease-out forwards;
+  }
+  
+  div#cell-value {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 32px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  #cell.merged {
+    animation: merge 0.2s ease-out normal;
+  }
+  
+  #cell.color-2 {
+    background: #d8ecff;
+    color: black;
+  }
+  
+  #cell.color-4 {
+    background: #d8ffe3;
+    color: black;
+  }
+  
+  #cell.color-8 {
+    color: #f9f6f2;
+    background: #817bff; 
+  }
+  
+  #cell.color-16 {
+    color: #f9f6f2;
+    background: #5e56ff; 
+  }
+  
+  #cell.color-32 {
+    color: #f9f6f2;
+    background: #342aff; 
+  }
+  
+  #cell.color-64 {
+    color: #f9f6f2;
+    background: #0900ba; 
+  }
+  
+  #cell.color-128 {
+    color: #f9f6f2;
+    background: #0080ba;
+  }
+  
+  #cell.color-256 {
+    color: #f9f6f2;
+    background: #00ba9a;
+  }
+  
+  #cell.color-512 {
+    color: #f9f6f2;
+    background: #00d368;
+  }
+  
+  #cell.color-1024 {
+    color: #f9f6f2;
+    background: #00e83f;
+  }
+  
+  #cell.color-2048 {
+    color: #f9f6f2;
+    background: #00ff00;
+  }
+  
+  #cell.color-super {
+    color: #f9f6f2;
+    background: #3c3a32;
+  }
+  
+  @keyframes merge {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
